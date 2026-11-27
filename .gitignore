@@ -1,0 +1,17 @@
+# Local environment and secrets
+.venv/
+.env
+.env.*
+!.env.example
+
+# Generated outputs
+artifacts/
+
+# Python cache and test tools
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/

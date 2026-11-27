@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Debug with uv: context",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "python",
+                "-c",
+                "import debugpy, runpy, sys; print('DEBUGPY_STARTING_CONTEXT', flush=True); debugpy.listen(('127.0.0.1', 5678)); print('DEBUGPY_READY_CONTEXT', flush=True); debugpy.wait_for_client(); sys.argv = ['main.py', 'check', 'context']; runpy.run_path('main.py', run_name='__main__')"
+            ],
+            "options": {"cwd": "${workspaceFolder}"},
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {"regexp": "^$"},
+                "background": {
+                    "beginsPattern": "^DEBUGPY_STARTING_CONTEXT$",
+                    "endsPattern": "^DEBUGPY_READY_CONTEXT$"
+                }
+            }
+        },
+        {
+            "label": "Debug with uv: memory",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "python",
+                "-c",
+                "import debugpy, runpy, sys; print('DEBUGPY_STARTING_MEMORY', flush=True); debugpy.listen(('127.0.0.1', 5678)); print('DEBUGPY_READY_MEMORY', flush=True); debugpy.wait_for_client(); sys.argv = ['main.py', 'check', 'memory']; runpy.run_path('main.py', run_name='__main__')"
+            ],
+            "options": {"cwd": "${workspaceFolder}"},
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {"regexp": "^$"},
+                "background": {
+                    "beginsPattern": "^DEBUGPY_STARTING_MEMORY$",
+                    "endsPattern": "^DEBUGPY_READY_MEMORY$"
+                }
+            }
+        },
+        {
+            "label": "Debug with uv: compare",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "python",
+                "-c",
+                "import debugpy, runpy, sys; print('DEBUGPY_STARTING_COMPARE', flush=True); debugpy.listen(('127.0.0.1', 5678)); print('DEBUGPY_READY_COMPARE', flush=True); debugpy.wait_for_client(); sys.argv = ['main.py', 'check', 'compare']; runpy.run_path('main.py', run_name='__main__')"
+            ],
+            "options": {"cwd": "${workspaceFolder}"},
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {"regexp": "^$"},
+                "background": {
+                    "beginsPattern": "^DEBUGPY_STARTING_COMPARE$",
+                    "endsPattern": "^DEBUGPY_READY_COMPARE$"
+                }
+            }
+        },
+        {
+            "label": "Debug with uv: cache",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "python",
+                "-c",
+                "import debugpy, runpy, sys; print('DEBUGPY_STARTING_CACHE', flush=True); debugpy.listen(('127.0.0.1', 5678)); print('DEBUGPY_READY_CACHE', flush=True); debugpy.wait_for_client(); sys.argv = ['main.py', 'check', 'cache']; runpy.run_path('main.py', run_name='__main__')"
+            ],
+            "options": {"cwd": "${workspaceFolder}"},
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {"regexp": "^$"},
+                "background": {
+                    "beginsPattern": "^DEBUGPY_STARTING_CACHE$",
+                    "endsPattern": "^DEBUGPY_READY_CACHE$"
+                }
+            }
+        }
+    ]
+}
