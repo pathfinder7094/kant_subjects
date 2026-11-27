@@ -68,7 +68,6 @@ def summarize(turns):
     for turn in turns:
         for name, value in support.fact_lines(turn["messages"][0]["content"]):
             # todo("최신 값과 출처 턴")
-            print(turn)
             summary[name] = {
                 "value" : value,
                 "source_turn_id" : turn["id"] 
@@ -88,8 +87,7 @@ def select_window(turns, limit, reserve, margin, make_messages, count):
         candidate = [turn, *kept]
         # todo("전체 후보 입력이 예산을 넘는지")
         if budget < count(make_messages(candidate)):
-            print(make_messages(candidate))
-            print("check---")
+        
             break
         kept = candidate
     # 관측: 압축 비교 후 토큰 수, 빠진 사실, 선택한 한도를 기록합니다.
