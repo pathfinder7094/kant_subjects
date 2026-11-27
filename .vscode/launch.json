@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Check: observe",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "main",
+            "args": ["check", "observe"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "Check: metrics",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "main",
+            "args": ["check", "metrics"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "Check: compare",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "main",
+            "args": ["check", "compare"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        }
+    ]
+}
