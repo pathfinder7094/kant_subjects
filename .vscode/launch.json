@@ -1,0 +1,71 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "uv: check index",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "preLaunchTask": "uv: debug check index",
+            "justMyCode": true
+        },
+        {
+            "name": "uv: check answer",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "preLaunchTask": "uv: debug check answer",
+            "justMyCode": true
+        },
+        {
+            "name": "uv: check evaluate",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "preLaunchTask": "uv: debug check evaluate",
+            "justMyCode": true
+        },
+        {
+            "name": "uv: check challenge",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "preLaunchTask": "uv: debug check challenge",
+            "justMyCode": true
+        },
+        {
+            "name": "uv: run index",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "preLaunchTask": "uv: debug run index",
+            "justMyCode": true
+        },
+        {
+            "name": "uv: demo",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "preLaunchTask": "uv: debug demo",
+            "justMyCode": true
+        }
+    ]
+}

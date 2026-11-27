@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Generated outputs and local vector database
+/artifacts/
+/qdrant_storage/
+
+# Editors and operating systems
+.idea/
+.DS_Store
+Thumbs.db

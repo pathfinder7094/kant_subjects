@@ -1,0 +1,178 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "uv: debug check index",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "--with",
+                "debugpy",
+                "python",
+                "${workspaceFolder}\\.vscode\\debug.py",
+                "5678",
+                "${workspaceFolder}\\main.py",
+                "check",
+                "index"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "uv-debug",
+                "pattern": {
+                    "regexp": "^(DEBUGPY_STARTING|DEBUGPY_READY)$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^DEBUGPY_STARTING$",
+                    "endsPattern": "^DEBUGPY_READY$"
+                }
+            }
+        },
+        {
+            "label": "uv: debug check answer",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "--with",
+                "debugpy",
+                "python",
+                "${workspaceFolder}\\.vscode\\debug.py",
+                "5678",
+                "${workspaceFolder}\\main.py",
+                "check",
+                "answer"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "uv-debug",
+                "pattern": {
+                    "regexp": "^(DEBUGPY_STARTING|DEBUGPY_READY)$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^DEBUGPY_STARTING$",
+                    "endsPattern": "^DEBUGPY_READY$"
+                }
+            }
+        },
+        {
+            "label": "uv: debug check evaluate",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "--with",
+                "debugpy",
+                "python",
+                "${workspaceFolder}\\.vscode\\debug.py",
+                "5678",
+                "${workspaceFolder}\\main.py",
+                "check",
+                "evaluate"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "uv-debug",
+                "pattern": {
+                    "regexp": "^(DEBUGPY_STARTING|DEBUGPY_READY)$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^DEBUGPY_STARTING$",
+                    "endsPattern": "^DEBUGPY_READY$"
+                }
+            }
+        },
+        {
+            "label": "uv: debug check challenge",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "--with",
+                "debugpy",
+                "python",
+                "${workspaceFolder}\\.vscode\\debug.py",
+                "5678",
+                "${workspaceFolder}\\main.py",
+                "check",
+                "challenge"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "uv-debug",
+                "pattern": {
+                    "regexp": "^(DEBUGPY_STARTING|DEBUGPY_READY)$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^DEBUGPY_STARTING$",
+                    "endsPattern": "^DEBUGPY_READY$"
+                }
+            }
+        },
+        {
+            "label": "uv: debug run index",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "--with",
+                "debugpy",
+                "python",
+                "${workspaceFolder}\\.vscode\\debug.py",
+                "5678",
+                "${workspaceFolder}\\main.py",
+                "run",
+                "index"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "uv-debug",
+                "pattern": {
+                    "regexp": "^(DEBUGPY_STARTING|DEBUGPY_READY)$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^DEBUGPY_STARTING$",
+                    "endsPattern": "^DEBUGPY_READY$"
+                }
+            }
+        },
+        {
+            "label": "uv: debug demo",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "--frozen",
+                "--with",
+                "debugpy",
+                "python",
+                "${workspaceFolder}\\.vscode\\debug.py",
+                "5678",
+                "${workspaceFolder}\\main.py",
+                "demo"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "uv-debug",
+                "pattern": {
+                    "regexp": "^(DEBUGPY_STARTING|DEBUGPY_READY)$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^DEBUGPY_STARTING$",
+                    "endsPattern": "^DEBUGPY_READY$"
+                }
+            }
+        }
+    ]
+}
